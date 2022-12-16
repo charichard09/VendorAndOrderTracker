@@ -57,26 +57,3 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 Copyright (c) _12-09-22_ _Richard Cha_
-
-
-
-Build an app to track Vendors and the Orders belonging to those vendors
-
-i.e. Vendor.Name == "Suzie's Cafe", Vendor.Orders == List<Order> { Order croissant, Order bagel }
-
-MVP:
-Create a Vendor class: name, description of vendor, List<Order> orders
-
-Create an Order class: title, description, price, date(Date.time similar function exist?)
-
-Create homepage at the root path (localhost:5000/): 
-header "Welcome Pierre" 
-link to a Vendors page.
-
-Create Vendors page:
-link to a page presenting a form to create a new Vendor, submit the new Vendor object to a static List inside Vendor, route back to the homepage
-
-at /vendor url, add function to click a Vendor's name to go to a /vendor/id/ page that will display all of that Vendor's orders.
-
-at /vendor/id/, create a link to a /vendor/id/orders/new page presenting a form to create a new Order for a particular Vendor
-
