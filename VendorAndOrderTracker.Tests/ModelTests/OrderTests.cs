@@ -99,4 +99,16 @@ public class OrderTests : IDisposable
 
       Assert.AreEqual(newOrder2, result);
     }
+
+    [TestMethod]
+    public void SetDate_SetsDateOnInstanceOfOrder_String()
+    {
+      string title = "Bread";
+      string description = "food made of flour, water, and yeast or another leavening agent, mixed together and baked.";
+      Order newOrder = new Order(title, description);
+
+      DateTime currentDate = DateTime.today;
+
+      Assert.AreEqual(currentDate, newOrder.Date);
+    }
 }
