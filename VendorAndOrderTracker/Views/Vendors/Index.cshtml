@@ -2,8 +2,32 @@
   Layout = "_Layout";
 }
 
-@if (Method.Count == 0)
-{
-  <p>There are no Vendors currently</p>
-}
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Vendor Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  @if (@Model.Count == 0)
+  {
+    <tr>
+      <th>0</th>
+      <th>Empty</th>
+      <th>Empty</th>
+    </tr>
+  }
+  @for (int i = 0; i < Model.Count; i++)
+  {
+    <tr>
+      <th>@Model[i].Id</th>
+      <th><a href="/vendors/@Model[i].Id">@Model[i].Name</a></th>
+      <th>@Model[i].Description</th>
+    </tr>
+  }
+  </tbody>
+</table>
+
 <p><a href="/vendors/new">Add a new vendor</a></p>
