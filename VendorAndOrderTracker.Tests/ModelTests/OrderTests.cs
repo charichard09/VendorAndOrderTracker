@@ -16,35 +16,41 @@ public class OrderTests : IDisposable
   [TestMethod]
   public void OrderConstructor_CreatesInstanceOfOrder_Order()
   {
-    Order newOrder = new Order("testName", "testDescription");
+    Order newOrder = new Order("testName", "testDescription", "testPrice");
 
     Assert.AreEqual(typeof(Order), newOrder.GetType());
   }
 
   [TestMethod]
-  public void GetDescriptionAndTitle_ReturnsDescriptionAndTitle_String()
+  public void GetDescriptionPriceAndTitle_ReturnsDescriptionPriceAndTitle_String()
   {
     string title = "Bread";
     string description = "food made of flour, water, and yeast or another leavening agent, mixed together and baked.";
-    Order newOrder = new Order(title, description);
+    string price = "5";
+    Order newOrder = new Order(title, description, price);
 
     Assert.AreEqual(title, newOrder.Title);
     Assert.AreEqual(description, newOrder.Description);
+    Assert.AreEqual(price, newOrder.Price);
   }
 
     [TestMethod]
-    public void SetDescriptionAndTitle_SetDescriptionAndTitle_String()
+    public void SetDescriptionPriceAndTitle_SetDescriptionPriceAndTitle_String()
     {
       string title = "Bread";
       string description = "food made of flour, water, and yeast or another leavening agent, mixed together and baked.";
+      string price = "5";
       Order newOrder = new Order(title, description);
       string updatedTitle = "Croissant";
       string updatedDescription = "a flaky rich crescent-shaped roll";
+      string updatePrice = "10";
       newOrder.Title = updatedTitle;
       newOrder.Description = updatedDescription;
+      newOrder.Price = updatePrice;
 
     Assert.AreEqual(updatedTitle, newOrder.Title);
     Assert.AreEqual(updatedDescription, newOrder.Description);
+    Assert.AreEqual(updatedPrice, newOrder.Price);
     }
 
     [TestMethod]
@@ -62,10 +68,12 @@ public class OrderTests : IDisposable
     {
       string title1 = "Bread";
       string description1 = "food made of flour, water, and yeast or another leavening agent, mixed together and baked.";
-      Order newOrder1 = new Order(title1, description1);
+      string price1 = "5";
+      Order newOrder1 = new Order(title1, description1, price1);
       string title2 = "Croissant";
       string description2 = "a flaky rich crescent-shaped roll";
-      Order newOrder2 = new Order(title2, description2);
+      string price2 = "5";
+      Order newOrder2 = new Order(title2, description2, price2);
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
 
       List<Order> result = Order.GetAll();
@@ -78,7 +86,8 @@ public class OrderTests : IDisposable
     {
       string title = "Bread";
       string description = "food made of flour, water, and yeast or another leavening agent, mixed together and baked.";
-      Order newOrder = new Order(title, description);
+      string price = "5";
+      Order newOrder = new Order(title, description, price);
 
       int result = newOrder.Id;
 
@@ -90,10 +99,12 @@ public class OrderTests : IDisposable
     {
       string title1 = "Bread";
       string description1 = "food made of flour, water, and yeast or another leavening agent, mixed together and baked.";
-      Order newOrder1 = new Order(title1, description1);
+      string price1 = "5";
+      Order newOrder1 = new Order(title1, description1, price1);
       string title2 = "Croissant";
       string description2 = "a flaky rich crescent-shaped roll";
-      Order newOrder2 = new Order(title2, description2);
+      string price2 = "5";
+      Order newOrder2 = new Order(title2, description2, price2);
 
       Order result = Order.Find(2);
 
@@ -105,7 +116,8 @@ public class OrderTests : IDisposable
     {
       string title = "Bread";
       string description = "food made of flour, water, and yeast or another leavening agent, mixed together and baked.";
-      Order newOrder = new Order(title, description);
+      string price = "5";
+      Order newOrder = new Order(title, description, price);
 
       DateTime currentDate = DateTime.Today;
 
