@@ -32,4 +32,13 @@ public class VendorsController : Controller
     Vendor foundVendor = Vendor.Find(id);
     return View(foundVendor);
   }
+
+  [HttpPost("/vendors/{id}/orders")]
+  public ActionResult Create(string name, string description, string price , int id)
+  {
+    Order newOrder = new Order(name, description, price);
+    Vendor newVendor = Vendor.Find(id);
+    newVendor.AddOrder(newOrder);
+    return View("Show", newVendor);
+  }
 }
