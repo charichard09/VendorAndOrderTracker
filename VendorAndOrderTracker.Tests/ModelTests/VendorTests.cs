@@ -79,7 +79,8 @@ public class VendorTests : IDisposable
   {
     string title = "Bread";
     string description1 = "food made of flour, water, and yeast or another leavening agent, mixed together and baked.";
-    Order newOrder = new Order(title, description1);
+    string price1 = "5";
+    Order newOrder = new Order(title, description1, price1);
     List<Order> newList = new List<Order> { newOrder };
     string name = "TestVendor";
     string description2 = "TestDescription";

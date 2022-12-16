@@ -40,13 +40,13 @@ public class OrderTests : IDisposable
       string title = "Bread";
       string description = "food made of flour, water, and yeast or another leavening agent, mixed together and baked.";
       string price = "5";
-      Order newOrder = new Order(title, description);
+      Order newOrder = new Order(title, description, price);
       string updatedTitle = "Croissant";
       string updatedDescription = "a flaky rich crescent-shaped roll";
-      string updatePrice = "10";
+      string updatedPrice = "10";
       newOrder.Title = updatedTitle;
       newOrder.Description = updatedDescription;
-      newOrder.Price = updatePrice;
+      newOrder.Price = updatedPrice;
 
     Assert.AreEqual(updatedTitle, newOrder.Title);
     Assert.AreEqual(updatedDescription, newOrder.Description);
