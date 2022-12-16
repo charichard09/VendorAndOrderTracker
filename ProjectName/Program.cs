@@ -13,6 +13,8 @@ namespace ProjectName
 
       WebApplication app = builder.Build();
 
+      app.UseHttpsRedirection();
+      app.UseStaticFiles();
       app.UseRouting();
 
       app.MapControllerRoute(

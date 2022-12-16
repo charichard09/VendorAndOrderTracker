@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Char\\Desktop\\epicodusProjects\\CSharpTemplate\\ProjectName\\ProjectName.csproj": {}
+    "C:\\Users\\Char\\Desktop\\epicodusProjects\\VendorAndOrderTracker.Solutions\\ProjectName\\ProjectName.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Char\\Desktop\\epicodusProjects\\CSharpTemplate\\ProjectName\\ProjectName.csproj": {
+    "C:\\Users\\Char\\Desktop\\epicodusProjects\\VendorAndOrderTracker.Solutions\\ProjectName\\ProjectName.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Char\\Desktop\\epicodusProjects\\CSharpTemplate\\ProjectName\\ProjectName.csproj",
+        "projectUniqueName": "C:\\Users\\Char\\Desktop\\epicodusProjects\\VendorAndOrderTracker.Solutions\\ProjectName\\ProjectName.csproj",
         "projectName": "ProjectName",
-        "projectPath": "C:\\Users\\Char\\Desktop\\epicodusProjects\\CSharpTemplate\\ProjectName\\ProjectName.csproj",
+        "projectPath": "C:\\Users\\Char\\Desktop\\epicodusProjects\\VendorAndOrderTracker.Solutions\\ProjectName\\ProjectName.csproj",
         "packagesPath": "C:\\Users\\Char\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Char\\Desktop\\epicodusProjects\\CSharpTemplate\\ProjectName\\obj\\",
+        "outputPath": "C:\\Users\\Char\\Desktop\\epicodusProjects\\VendorAndOrderTracker.Solutions\\ProjectName\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Char\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -49,6 +49,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
