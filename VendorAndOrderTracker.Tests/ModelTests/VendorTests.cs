@@ -1,5 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VendorAndOrderTracker.Models;
+using System.Collections.Generic;
+using System;
 
 namespace VendorAndOrderTracker.Tests;
 
@@ -76,12 +78,12 @@ public class VendorTests : IDisposable
   public void AddOrder_AssociatesOrderWithVendor_OrderList()
   {
     string title = "Bread";
-    string description = "food made of flour, water, and yeast or another leavening agent, mixed together and baked.";
-    Order newOrder = new Order(title, description);
+    string description1 = "food made of flour, water, and yeast or another leavening agent, mixed together and baked.";
+    Order newOrder = new Order(title, description1);
     List<Order> newList = new List<Order> { newOrder };
     string name = "TestVendor";
-    string description = "TestDescription";
-    Vendor newVendor = new Vendor(name, description);
+    string description2 = "TestDescription";
+    Vendor newVendor = new Vendor(name, description2);
     newVendor.AddOrder(newOrder);
 
     List<Order> result = newVendor.Orders;

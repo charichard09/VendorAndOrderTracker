@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace VendorAndOrderTracker.Models;
 
 public class Vendor
@@ -5,8 +7,8 @@ public class Vendor
   public string Name { get; set; }
   public string Description { get; set; }
   public int Id { get; }
-  List<Vendor> _instances = new List<Vendor> {};
-  List<Order> Orders = new List<Order> {};
+  private static List<Vendor> _instances = new List<Vendor> {};
+  public List<Order> Orders = new List<Order> {};
 
   public Vendor(string name, string description)
   {
