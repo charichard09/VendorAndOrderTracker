@@ -18,7 +18,7 @@ public class Order
     Description = description;
     _instances.Add(this);
     Id = _instances.Count;
-    TodaysDate = DateTime.Today;
+    TodaysDate = DateTime.Now;
     Price = price;
   }
 

@@ -34,9 +34,9 @@ public class VendorsController : Controller
   }
 
   [HttpPost("/vendors/{id}/orders")]
-  public ActionResult Create(string name, string description, string price , int id)
+  public ActionResult Create(string title, string description, string price , int id)
   {
-    Order newOrder = new Order(name, description, price);
+    Order newOrder = new Order(title, description, price);
     Vendor newVendor = Vendor.Find(id);
     newVendor.AddOrder(newOrder);
     return View("Show", newVendor);
