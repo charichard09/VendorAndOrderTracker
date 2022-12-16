@@ -1,0 +1,40 @@
+@{
+  Layout = "_Layout";
+}
+<h1>@Model.Name Orders</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Date Added</th>
+    </tr>
+  </thead>
+  <tbody>
+  @if (@Model.Orders.Count == 0)
+  {
+    <tr>
+      <th>0</th>
+      <th>Empty</th>
+      <th>Empty</th>
+      <th>Empty</th>
+      <th>Empty</th>
+    </tr>
+  }
+  @for (int i = 0; i < @Model.Orders.Count; i++)
+  {
+    <tr>
+      <th>@Model.Orders[i].Id</th>
+      <th><a href="/vendors/@Model.Orders[i].Id">@Model.Orders[i].Title</a></th>
+      <th>@Model.Orders[i].Description</th>
+      <th>@Model.Orders[i].Price</th>
+      <th>@Model.Orders[i].DateAdded</th>
+    </tr>
+  }
+  </tbody>
+</table>
+
+<p><a href="/vendors">Back to vendors</a></p>
