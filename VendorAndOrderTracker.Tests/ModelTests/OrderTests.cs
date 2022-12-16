@@ -107,8 +107,8 @@ public class OrderTests : IDisposable
       string description = "food made of flour, water, and yeast or another leavening agent, mixed together and baked.";
       Order newOrder = new Order(title, description);
 
-      DateTime currentDate = DateTime.today;
+      DateTime currentDate = DateTime.Today;
 
-      Assert.AreEqual(currentDate, newOrder.Date);
+      Assert.AreEqual(currentDate, newOrder.TodaysDate);
     }
 }
