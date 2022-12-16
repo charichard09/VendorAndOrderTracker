@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VendorAndOrderTracker.Models;
 using System.Collections.Generic;
+using System;
 
 namespace VendorAndOrderTracker.Tests;
 
@@ -64,12 +65,11 @@ public class OrderTests : IDisposable
       Order newOrder1 = new Order(title1, description1);
       string title2 = "Croissant";
       string description2 = "a flaky rich crescent-shaped roll";
-      Order newOrder2 = new Order(title2, description2)
+      Order newOrder2 = new Order(title2, description2);
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
 
       List<Order> result = Order.GetAll();
 
-      // Assert
       CollectionAssert.AreEqual(newList, result);
     }
 
@@ -80,10 +80,8 @@ public class OrderTests : IDisposable
       string description = "food made of flour, water, and yeast or another leavening agent, mixed together and baked.";
       Order newOrder = new Order(title, description);
 
-      // Act 
       int result = newOrder.Id;
 
-      // Assert
       Assert.AreEqual(1, result);
     }
 
@@ -95,12 +93,10 @@ public class OrderTests : IDisposable
       Order newOrder1 = new Order(title1, description1);
       string title2 = "Croissant";
       string description2 = "a flaky rich crescent-shaped roll";
-      Order newOrder2 = new Order(title2, description2)
+      Order newOrder2 = new Order(title2, description2);
 
-      // Act
       Order result = Order.Find(2);
 
-      // Assert
       Assert.AreEqual(newOrder2, result);
     }
 }
