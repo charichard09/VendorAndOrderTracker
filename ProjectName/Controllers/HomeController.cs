@@ -1,15 +1,14 @@
-using FriendLetter.Models;
+using VendorAndOrderTracker.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FriendLetter.Controllers
-{
-  public class HomeController : Controller
-  {
+namespace VendorAndOrderTracker.Controllers;
 
-    [Route("/")]
-    public ActionResult Index() 
-    {
-      return View();
-    }
+public class HomeController : Controller
+{
+
+  [Route("/")]
+  public ActionResult Index() 
+  {
+    return View();
   }
 }
