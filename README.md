@@ -1,8 +1,8 @@
-# _Project Name_
+# _Pierre's Vendor and Order Tracker_
 
 #### By _**Richard Cha**_
 
-#### _Choose from Pastry or Bread, give amount, and return total cost_
+#### _Track vendors and the orders belonging to those vendors_
 
 ## Technologies Used
 
@@ -10,23 +10,25 @@
 * _.Net 6_
 * _MSTest_
 * _ASP.NET Core 6 MVC_
+* _BootStrap_
 
 ## Description
 
-_This application will prompt the user to enter if they'd like to add Bread or Pastry to Cart then how many to add to Cart. It will then give the prompt an option to add more as a yes or no._
-_If the user is done adding items to the cart, the program will display their cart and a Cart Total._
+_This application will present a user a list of Vendors that can be added to by clicking the "Add a new vendor" button
+and filling out the following form. After a vendor is input, it will displayed on the "https://localhost:5001/vendors" page 
+which a user can then click on a vendor name to be taken to that specific vendor's orders list. In the same fashion a user can add to that vendor's orders by clicking the "Add to order" button and filling out the following form which will then be displayed on the "https://localhost:5001/vendors/id" page._
 
 ## Setup/Installation Requirements
 
 * _Install .Net 6 SDK:_
 * [OS X and Windows Instructions](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-c-and-net)
 * _Clone this repo to a local directory_
-* _Using Terminal on OS X or PowerShell on Windows navigate to the top directory that this repo was cloned to (YourPath/PierresBakery.Solution):_ 
+* _Using Terminal on OS X or PowerShell on Windows navigate to the top directory that this repo was cloned to (YourPath/VendorAndOrderTracker.Solution):_ 
 * _Confirm all business logic tests pass with MSTest by running commands (not including the dollar symbol):_
-* _$ dotnet restore ./PierresBakery.Tests_
-* _$ dotnet test ./PierresBakery.Tests_
+* _$ dotnet restore ./VendorAndOrderTracker.Tests_
+* _$ dotnet test ./VendorAndOrderTracker.Tests_
 * _Then run the program with command :_
-* _$ dotnet run --project PierresBakery_
+* _$ dotnet watch run --project VendorAndOrderTracker_
 
 ## Known Bugs
 
@@ -56,4 +58,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Copyright (c) _12-09-22_ _Richard Cha_
+Copyright (c) _12-16-22_ _Richard Cha_
