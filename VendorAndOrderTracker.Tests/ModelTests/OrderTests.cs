@@ -119,8 +119,8 @@ public class OrderTests : IDisposable
       string price = "5";
       Order newOrder = new Order(title, description, price);
 
-      DateTime currentDate = DateTime.Today;
+      DateTime currentDate = DateTime.Now;
 
-      Assert.AreEqual(currentDate, newOrder.TodaysDate);
+      Assert.AreEqual(currentDate.ToString(), newOrder.TodaysDate.ToString());
     }
 }
